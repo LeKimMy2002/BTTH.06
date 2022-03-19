@@ -4,6 +4,7 @@
     background: #f2f2f2; 
     width: 600px; 
     margin: 50px auto;
+    border-radius: 10px;
 } 
 .d-flex-center {
     display: flex; 
@@ -30,16 +31,6 @@
     margin-left: 15px; 
 }
 /* CSS requirement 2 */
-*{
-    margin: 0;
-    padding: 0;
-}
-
-body{
-    width: 100vw;
-    height: 100vh;
-}
-
 table{
     width: 800px;
     height: 200px;
@@ -54,4 +45,23 @@ th{
 }
 .border {
     border-radius:  5px;
+    margin-left: 10px;
+}
+.changeColor {
+    color: red;
+}
+.animation {
+    animation: zoomText 6s ease;
+}
+.title {
+    font-size: 20px;
+}
+
+@keyframes zoomText {
+    0% {
+        font-size: 20px;
+    }
+    100% {
+        font-size: 40px;
+    }
 }

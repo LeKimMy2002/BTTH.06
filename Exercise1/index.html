@@ -2,42 +2,46 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Tương thích" content="IE = edge" />
+    <meta http-equiv="X-UA-Compatible" content="IE = edge" />
     <meta name="viewport" content="width = device-width, initial-scale = 1.0" />
     <title>Sử dụng đối tượng Array và Window</title>
     <link rel="stylesheet" href="/style.css" />
   </head>
   <body>
     <!-- requirement 1 -->
-    <div class="container">
-      <h2 style="text-align: center">Thao tác trên mảng</h2>
-      <div class="d-flex-center row">
-        <div class="d-flex-center containerButton">
-          <button>Tạo mảng</button>
-        </div>
-        <div class="d-flex-center containerNumber"><p></p></div>
+    <div class='container'>
+      <h2 style='text-align: center'>Thao tác trên mảng</h2>
+      <div class='d-flex-center row '>
+          <div class="d-flex-center containerButton">
+            <button onclick="createArray()">Tạo mảng</button>
+          </div>
+          <div class="d-flex-center containerNumber">
+            <p id="numberList"></p>
+          </div>
       </div>
-      <div class="row"><p>Các mảng giá trị sau khi xử lý</p></div>
-      <div class="row">
-        <div class="d-flex-center containerOption">
-          <input type="checkbox" đã kiểm tra />
-          <p>Sắp xếp tăng</p>
-        </div>
-        <div class="d-flex-center containerOption">
-          <input type="checkbox" />
-          <p>Sắp xếp tăng trưởng</p>
-        </div>
+      <div class='row'>
+          <p id="valueAfterGet">Giá trị mảng sau khi xử lí</p>
       </div>
-      <div class="row">
-        <div class="d-flex-center containerInput">
-          <p>Thêm vào vị trí position</p>
-          <input type="number" />
-        </div>
-        <div class="d-flex-center containerInput">
-          <p>Giá trị</p>
-          <input type=" number " />
-        </div>
-        <button style="margin-bottom: 20px">Thêm</button>
+      <div class='row'>
+          <div class="d-flex-center containerOption"  onchange='toggleCheckbox("increase","deincrease")'>
+            <input type="checkbox"  id='increase' checked/>
+            <p>Sắp xếp tăng</p>
+          </div>
+          <div class="d-flex-center containerOption"   onchange='toggleCheckbox("deincrease","increase")'>
+            <input type="checkbox"  id='deincrease'/>
+            <p>Sắp xếp tăng</p>
+          </div>
+      </div>
+      <div class='row'>
+          <div class="d-flex-center containerInput">
+            <p>Thêm vào vị trí</p>
+            <input type="number"  id='position'/>
+          </div>
+          <div class="d-flex-center containerInput">
+            <p>Giá trị</p>
+            <input type="number"  id='valueInput'/>
+          </div>
+          <button style="margin-bottom: 20px;" onclick="getValue()">Thêm</button> 
       </div>
     </div>
     <!-- requirement 2 -->
@@ -45,14 +49,14 @@
       <tr>
           <th style="width: 25%; background-color: black;">
               <div style="display: flex; justify-content: center">
-                  <img class="hour_1" src="/img/00.gif" alt="" />
-                  <img class="hour_2" src="/img/00.gif" alt="" />
-                  <img class="two_dot" src="/img/haicham.gif" alt="" />
-                  <img class="minute_1" src="/img/00.gif" alt="" />
-                  <img class="minute_2" src="/img/00.gif" alt="" />
-                  <img class="two_dot" src="/img/haicham.gif" alt="" />
-                  <img class="second_1" src="/img/00.gif" alt="" />
-                  <img class="second_2" src="/img/00.gif" alt="" />
+                  <img class="hour_1" src="/img/00.gif" alt="/" />
+                  <img class="hour_2" src="/img/00.gif" alt="/" />
+                  <img class="two_dot" src="/img/haicham.gif" alt="/" />
+                  <img class="minute_1" src="/img/00.gif" alt="/" />
+                  <img class="minute_2" src="/img/00.gif" alt="/" />
+                  <img class="two_dot" src="/img/haicham.gif" alt="/" />
+                  <img class="second_1" src="/img/00.gif" alt="/" />
+                  <img class="second_2" src="/img/00.gif" alt="/" />
               </div>
           </th>
           <th class="border">
@@ -60,6 +64,6 @@
           </th>
       </tr>
   </table>
-  <script src="script.js"></script>
+  <script src="main.js"></script>
   </body>
 </html>
